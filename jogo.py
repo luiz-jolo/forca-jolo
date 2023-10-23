@@ -1,16 +1,16 @@
+from Tools import gerador_palavra, valida_entrada, separador
+
+
 print('#####################')
 print('Bem vindo ao clássico jogo da F O R C A')
 print('#####################')
 
-def jogar():
-    print('### F O R C A - tema: animais ###\n')
+animais = ['rinoceronte', 'macaco', 'arara', 'capivara', 'jacare', 'zebra']
 
-    animais = ['rinoceronte', 'macaco', 'arara', 'capivara', 'jacare', 'zebra']
-    quantidadeAnimais = len(animais)
+def jogar():
     
-    print(quantidadeAnimais)
-    
-    
-    chute =  input('Digite uma letra\n')
+    animal = gerador_palavra.gerar_palavra(animais)
+    chute = input('Digite uma letra\n')
+    retorno = valida_entrada.valida_string(chute)
 
 jogar()
